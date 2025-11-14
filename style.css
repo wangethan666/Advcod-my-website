@@ -264,3 +264,104 @@ ul li a:hover{
 .icons ion-icon:hover{
     color: #ff7200;
 }
+
+/* --- Lab 5 extra styles and animations --- */
+
+/* Make navbar width flexible so it works on all pages */
+.navbar{
+    width: 100%;
+    max-width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+
+/* Gallery section on the Home page */
+.gallery{
+    margin: 40px 20px;
+}
+.gallery h2{
+    font-family: Arial;
+    margin-bottom: 15px;
+}
+.grid{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    animation: floatUp 6s ease-in-out infinite;
+}
+
+/* About page helpers */
+.about-list{
+    margin: 10px 0 15px 35px;
+}
+.about-list li{
+    margin-bottom: 5px;
+}
+.about-sect{
+    margin-top: 20px;
+}
+
+/* Join page form */
+.join{
+    margin-top: 20px;
+}
+.join input,
+.join select{
+    margin: 8px 0 12px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #ff7200;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    width: 260px;
+}
+.thank-note{
+    margin-top: 16px;
+}
+
+/* SUPER visible animations for Lab 5 */
+.hero-title{
+    animation: fadeIn 1.2s ease-out both;
+}
+.hero-title span{
+    animation: colorChange 3s infinite;
+}
+
+/* Keyframes */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatUp{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes colorChange{
+    0%{
+        color: #ff7200;
+    }
+    50%{
+        color: #DAF7A6;
+    }
+    100%{
+        color: #ff7200;
+    }
+}
